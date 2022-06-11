@@ -1,8 +1,27 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Work+Sans:400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fascinate&family=Inconsolata:wght@200&family=Pacifico&family=Poppins:ital@1&display=swap');
 
 
 
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
+#grad {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(223, 219, 24));
+  }
+
+.comi{
+    background: -webkit-linear-gradient(49deg, #09009f, #00ff95 80%);
+    font-size: 60px;
+    font-family: 'Fascinate', cursive;
+}
+
+/*
+font-family: 'Dancing Script', cursive;
+font-family: 'Fascinate', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+*/
