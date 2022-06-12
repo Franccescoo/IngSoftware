@@ -1,11 +1,16 @@
 from unicodedata import name
 from django.urls import URLPattern, path
-from .views import index, menu, test, Registrarse
+from .views import  menu, test, Registrarse, registrarUsuario
+from . import views
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
-    path('',index,name="index"),
+    path('',menu,name="menu"),
     path('menu',menu,name="menu"),
     path('test',test,name="test"),
-    path('Registrarse',Registrarse,name="Registrarse"),
+    path('Registrarse',views.Registrarse,name="Registrarse"),
+
+
+    path('registrarUsuario', views.registrarUsuario, name="registrarUsuario"),
 
 ]
