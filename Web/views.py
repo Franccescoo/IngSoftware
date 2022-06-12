@@ -10,3 +10,6 @@ def menu(request):
 
 def test(request):
     return render(request,'Web/test.html')
+
+def Registrarse(request):
+    return render(request,'Web/Registrarse.html')
