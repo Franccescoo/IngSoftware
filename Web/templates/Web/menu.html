@@ -1,0 +1,43 @@
+{% extends 'Web/layout.html' %}
+{% load static %}
+
+    <!-- ***** Menu Area Start ***** -->
+    {% block menu %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="padding-top: 20px;margin-bottom: 20px;">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'Web/img/comidas/pizza1.jpg' %}"
+                        style="height: 220px;" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-tittle">Pizza de pepperoni</h5>
+                        <hr />
+                        <h6 class="card-subtittle">Base de salsa de tomate y queso y pepperoni importado.</h6>
+                        <h5 class="card-subtittle">$9.990</h5>                                                  
+                    </div>      
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="col-md-3" style="padding-top: 20px;margin-bottom: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'Web/img/comidas/hambur.jpeg' %}"
+                            style="height: 220px;" alt="Pizza">
+                        <div class="card-body">
+                            <h5 class="card-tittle">Hamburguesa Italiana</h5>
+                            <hr />
+                            <h6 class="card-subtittle">Carne de vacuno, lechuga, tomate, mayonesa.</h6>
+                            <h5 class="card-subtittle">$3.250</h5>                                                 
+                        </div>      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock menu %}
+    <!-- ***** Menu Area End ***** -->

@@ -9,19 +9,36 @@ body{
 }
 
 #grad {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(223, 219, 24));
+    background-image: linear-gradient(to right, rgb(255, 72, 0), rgb(212, 155, 0));
   }
 
 .comi{
-    background: -webkit-linear-gradient(49deg, #09009f, #00ff95 80%);
-    font-size: 60px;
+    background-image: linear-gradient(90deg, rgb(255, 0, 0), rgb(236, 240, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 80px;
     font-family: 'Fascinate', cursive;
+    margin-bottom: 100px;
 }
 
-/*
-font-family: 'Dancing Script', cursive;
-font-family: 'Fascinate', cursive;
-font-family: 'Inconsolata', monospace;
-font-family: 'Pacifico', cursive;
-font-family: 'Poppins', sans-serif;
-*/
+/* Footer Area CSS */
+
+.caviar-footer-area {
+    background-color: #2f2c5a;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.caviar-footer-area .navbar-brand {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-text > p {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* END FOOTER*/
+
