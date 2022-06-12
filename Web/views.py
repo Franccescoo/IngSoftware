@@ -7,3 +7,6 @@ def index(request):
 
 def menu(request):
     return render(request,'Web/menu.html')
+
+def test(request):
+    return render(request,'Web/test.html')

@@ -42,3 +42,31 @@ body{
 
 /* END FOOTER*/
 
+.single-hero {
+    position: relative;
+    z-index: 1;
+    height: 770px;
+    width: 100%;
+}
+
+.single-hero:after {
+    position: absolute;
+    width: calc(50% - 112px);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+}
+
+.single-hero:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
