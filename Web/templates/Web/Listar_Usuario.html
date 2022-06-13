@@ -1,0 +1,42 @@
+{% extends 'Web/layout.html' %}
+{% load static %}
+
+    <!-- ***** Menu Area Start ***** -->
+    {% block menu %}
+
+    <div class="caviar-food-menu section-padding-150 clearfix" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+    
+                <div class="container">
+                    <div class="row">
+                        <center><h1 style="color: rgb(179, 53, 53);">Listado de Administradores</h1></center>
+                    </div>
+    
+                    <div class="row" style="overflow-x:auto;">
+                        <table class="table table-striped">
+                            <tr>
+                                <td>ID</td>
+                                <td>Nombre</td>
+                                <td>Apellido</td>
+                                <td>Correo</td>
+                                <td>Rol</td>
+                            </tr>
+                            {% for m in usuario %}
+                            <tr>
+                                <td>{{ m.idUsuario }}</td>
+                                <td>{{ m.nomUsuario }}</td>
+                                <td>{{ m.apellido }}</td>
+                                <td>{{ m.email }}</td> 
+                                <td>{{ m.RolUsuario }}</td>                           
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock menu %}
+    <!-- ***** Menu Area End ***** -->

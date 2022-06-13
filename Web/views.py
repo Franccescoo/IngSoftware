@@ -8,13 +8,14 @@ from django.contrib import messages
 def menu(request):
     return render(request,'Web/menu.html')
 
-def test(request):
-    return render(request,'Web/test.html')
+def Listar_Usuario(request):
+    return render(request,'Web/Listar_Usuario.html')
 
 def Registrarse(request):
     return render(request,'Web/Registrarse.html')
 
 
+# Vistas de Usuarios 
 
 def registrarUsuario(request):
     nombre2     = request.POST['nomUser']
@@ -29,14 +30,47 @@ def registrarUsuario(request):
         c1 = True      
     
     if c1 == True:
-        messages.error(request, 'Cargando')
         Usuario.objects.create(nomUsuario = nombre2, apellido = apellido2, email = email2, contrasena = contra2)
+
         sesion = Usuario.objects.get(nomUsuario=nombre2)
         contexto ={
         "sesion":sesion
         }
         messages.success(request, 'Cuenta registrada')
-        return render(request,"Recetas/menu.html",contexto)
+        return render(request,"Web/Registrarse.html",contexto)
     else:
         messages.error(request, 'El correo ya esta ocupado')
         return redirect ('Registrarse')
+
+
+
+def listadoUsuario(request):
+    usuario = Usuario.objects.all()
+    contexto = {"lista_u":usuario}
+    return render(request,"Web/Listar_Usuario.html", contexto)
+
+
+
+def Listar_Usuario(request):
+    UserAdmin = Usuario.objects.all()
+    contexto = {
+        "usuario":UserAdmin,
+        }
+    return render(request,'Web/Listar_Usuario.html',contexto)
+
+
+
+def eliminar_usuario(request,id,sesi):
+    usuar = Usuario.objects.get(idUsuario = id)
+    usuar.delete() #Elimina registro
+    messages.success(request,'Usuario Eliminado')
+
+    x = Usuario.objects.get(idUsuario=sesi)
+    rol2 = RolUsuario.objects.get(nomRol = 'Administrador')
+
+    if x.RolUsuario.nomRol == rol2.nomRol:
+        contexto ={"sesion":x}
+        return render(request, 'Web/Listar_Usuario.html',contexto)
+    else:
+        contexto ={"sesion":x}
+        return render(request, 'Web/Listar_Usuario.html',contexto)
