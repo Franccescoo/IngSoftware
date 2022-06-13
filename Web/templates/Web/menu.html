@@ -4,9 +4,13 @@
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
+    <div class="contact-form-title"  >
+        <center><p style="margin-top: 20px; font-size: 20px; color: black;margin-bottom: 10px;">¡Lo que estas buscando!</p></center>
+    </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-3" style="padding-top: 20px;margin-bottom: 20px;">
+            <div class="col-md-4" style="padding-top: 20px;margin-bottom: 20px;">
                 <div class="card">
                     <img class="card-img-top" src="{% static 'Web/img/comidas/pizza1.jpg' %}"
                         style="height: 220px;" alt="Pizza">
@@ -19,24 +23,33 @@
                 </div>
             </div>
 
-        </div>
-        <div class="row">
-            <div class="row">
-                <div class="col-md-3" style="padding-top: 20px;margin-bottom: 20px;">
-                    <div class="card">
-                        <img class="card-img-top" src="{% static 'Web/img/comidas/hambur.jpeg' %}"
-                            style="height: 220px;" alt="Pizza">
-                        <div class="card-body">
-                            <h5 class="card-tittle">Hamburguesa Italiana</h5>
-                            <hr />
-                            <h6 class="card-subtittle">Carne de vacuno, lechuga, tomate, mayonesa.</h6>
-                            <h5 class="card-subtittle">$3.250</h5>                                                 
-                        </div>      
-                    </div>
+            <div class="col-md-4" style="padding-top: 20px;margin-bottom: 20px;">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'Web/img/comidas/empanada1.jpg' %}"
+                        style="height: 220px;" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-tittle">Empanada de Pino</h5>
+                        <hr />
+                        <h6 class="card-subtittle">Masa de horno rellena con pino de carne</h6>
+                        <h5 class="card-subtittle">$1.790</h5>                                                 
+                    </div>      
                 </div>
+            </div>
 
+            <div class="col-md-4" style="padding-top: 20px;margin-bottom: 20px;">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'Web/img/comidas/hambur.jpeg' %}"
+                        style="height: 220px;" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-tittle">Hamburguesa Italiana</h5>
+                        <hr />
+                        <h6 class="card-subtittle">Carne de vacuno, lechuga, tomate, mayonesa.</h6>
+                        <h5 class="card-subtittle">$3.250</h5>                                                 
+                    </div>      
+                </div>
             </div>
         </div>
+        
     </div>
 
     {% endblock menu %}
