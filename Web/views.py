@@ -14,6 +14,9 @@ def Listar_Usuario(request):
 def Registrarse(request):
     return render(request,'Web/Registrarse.html')
 
+def Registrarse(request):
+    return render(request,'Web/Registrarse.html')
+
 def test(request):
     return render(request,'Web/test.html')
 
