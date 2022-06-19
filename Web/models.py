@@ -17,7 +17,7 @@ class Usuario(models.Model):
     apellido         = models.CharField(max_length=50, blank=True, null=True)
     email            = models.CharField(max_length=50, null=False)
     contrasena       = models.CharField(max_length=30, null=False, blank=False)
-    RolUsuario       = models.ForeignKey(RolUsuario, on_delete= models.CASCADE, default=1)
+    RolUsuario       = models.ForeignKey(RolUsuario, on_delete= models.CASCADE, default=2)
 
     def __str__(self) :
             return self.nomUsuario

@@ -1,0 +1,41 @@
+{% extends 'Web/layout.html' %}
+{% load static %}
+
+    <!-- ***** Menu Area Start ***** -->
+    {% block menu %}
+
+    <div class="contact-form">
+        <div class="contact-form-title">
+            <center><p style="margin-top: 10px; font-size: 20px; color: black;">Iniciar Sesión</p></center>
+        </div>
+        <form action="{% url 'login_app' %}" method="POST" name="formulario1" id="formulario1" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if messages %}
+            <div>
+                {% for i in messages %}
+                <p style="color: red;">{{ i }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="row">                
+                <div>
+                    <label>Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="nomUser" name="nomUser" placeholder="Ingrese su nombre de Usuario" required>
+                </div>
+                <div>
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Ingrese su contraseña" required>
+                </div>
+                <div>
+                    <center class="col-12 contact-form-title">
+                    <input type="submit" class="gradient-button gradient-button-1" value="Iniciar Sesión">
+                    </center>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+    {% endblock menu %}
+    <!-- ***** Menu Area End ***** -->

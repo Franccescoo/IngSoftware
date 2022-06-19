@@ -17,6 +17,30 @@ def Registrarse(request):
 def test(request):
     return render(request,'Web/test.html')
 
+def Login(request):
+    return render(request,'Web/Login.html')
+
+def Vista_Usuario(request,id):
+    sesion = Usuario.objects.get(idUsuario=id)
+    contexto={
+        "sesion":sesion
+    }
+    return render(request,'Web/Vista_Usuario.html',contexto)
+
+def Vista_Admin(request,sesion):
+
+    contexto={
+        "sesion":sesion
+    }
+    return render(request,'Web/Vista_Admin.html',contexto)
+
+#def inicioUser(request,sesion):
+
+    contexto={
+        "sesion":sesion
+    }
+    return render(request,'Recetas/inicioUser.html',contexto)
+
 
 # Vistas de Usuarios 
 
