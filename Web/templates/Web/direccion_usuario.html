@@ -1,0 +1,51 @@
+{% extends 'Web/layout.html' %}
+{% load static %}
+
+    <!-- ***** MENU PERSONALIZADO EN NAV ***** -->
+    {% block menuperso %}
+    <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
+    {% endblock menuperso %}
+    <!------------------------------------------->
+
+    <!-- ***** AÑADIR CERRAR SESION Y ALGO MAS ***** -->
+    {% block nav1 %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'direccion_usuario' %}">Dirección</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
+    </li>
+    {% endblock nav1 %}
+   <!------------------------------------------->
+
+    <!-- ***** AÑADIR VER PERFIL ***** -->
+    {% block perfil %}
+    <a class="dropdown-item" href="{% url 'Vista_Usuario' %}">Ver Perfil</a>
+    {% endblock perfil %}
+    <!------------------------------------------->
+    <!------------------------------------------->
+    <!------------------------------------------->
+    <!-- ***** Menu Area Start ***** -->
+    {% block menu %}
+
+    <div class="container">
+        <div class="contact-form">
+            <div class="contact-form-title">
+                <center><p style="margin-top: 10px; font-size: 20px; color: black;">Dirección</p></center>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                     <input type="text" class="form-control" placeholder="Jardin de Marte Sur 590" readonly="readonly" style="width: 400px;">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'Web/img/plan-img/editar.png' %}" height="30px" style="margin-top: 10px;">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'Web/img/plan-img/anadir.png' %}" height="30px" style="margin-top: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock menu %}
+    <!-- ***** Menu Area End ***** -->

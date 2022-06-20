@@ -8,11 +8,14 @@ from django.contrib import messages
 def menu(request):
     return render(request,'Web/menu.html')
 
+def menu_usuario(request):
+    return render(request,'Web/menu_usuario.html')
+
 def Listar_Usuario(request):
     return render(request,'Web/Listar_Usuario.html')
 
-def Registrarse(request):
-    return render(request,'Web/Registrarse.html')
+def direccion_usuario(request):
+    return render(request,'Web/direccion_usuario.html')
 
 def Registrarse(request):
     return render(request,'Web/Registrarse.html')

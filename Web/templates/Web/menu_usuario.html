@@ -2,8 +2,12 @@
 {% load static %}
 
     {% block menuperso %}
-    <a class="nav-link" href="{% url 'menu' %}">Menu <span class="visually-hidden">(current)</span></a>
+    <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
     {% endblock menuperso %}
+
+    {% block perfil %}
+    <a class="dropdown-item" href="{% url 'Vista_Usuario' %}">Ver Perfil</a>
+    {% endblock perfil %}
 
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}

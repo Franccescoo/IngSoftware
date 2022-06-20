@@ -65,13 +65,15 @@
 
         <nav class="navbar navbar-expand navbar-light bg-faded" id="grad">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'menu' %}">El Comilon</a>
+                <a class="navbar-brand" href="#">El Comilon</a>
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'menu' %}">Menu <span class="visually-hidden">(current)</span></a>
+                        {% block menuperso %}
+                        {% endblock menuperso %}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'Listar_Usuario' %}">Listar Administradores</a>
+                        {% block listar %}
+                        {% endblock listar %}
                     </li>
                     {% block nav1 %}
                     {% endblock nav1 %}

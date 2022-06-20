@@ -3,17 +3,50 @@
 
     {% block nav1 %}
     <li class="nav-item">
-        <a class="nav-link" href="#">Dirección</a>
+        <a class="nav-link" href="{% url 'direccion_usuario' %}">Dirección</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
     </li>
     {% endblock nav1 %}
 
+    {% block menuperso %}
+    <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
+    {% endblock menuperso %}
+
+    {% block perfil %}
+    <a class="dropdown-item" href="{% url 'Vista_Usuario' %}">Ver Perfil</a>
+    {% endblock perfil %}
+
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
-    
+    <div class="container">
+        <div class="contact-form">
+            <div class="contact-form-title">
+                <center><p style="margin-top: 10px; font-size: 20px; color: black;">Perfil</p></center>
+            </div>
+            <div class="row">
+                
+                <div class="col-12 contact-form-title" >
+                    <p style="margin-bottom: 10px;">Nombre:</p>
+                    <input type="text" class="form-control" placeholder="Fran" id="nomUser" name="nomUser" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Apellido:</p>
+                    <input type="text" class="form-control" placeholder="Artuso" id="apeUser" name="apeUser" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Email:</p>
+                    <input type="email" class="form-control" placeholder="fr.artuso@duocuc.cl" name="email" id="email" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Contraseña:</p>
+                    <input type="password" class="form-control" placeholder="*********" name="password1" id="password1" readonly="readonly">
+                </div>
+            </div>
+        </div>
+    </div>
     
 
     {% endblock menu %}

@@ -1,10 +1,12 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    {% block menuperso %}
+    <a class="nav-link" href="{% url 'menu' %}">Menu <span class="visually-hidden">(current)</span></a>
+    {% endblock menuperso %}
+
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
-
-
 
     <div class="contact-form">
         <div class="contact-form-title">
