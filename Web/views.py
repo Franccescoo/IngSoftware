@@ -14,6 +14,9 @@ def menu_usuario(request):
 def Listar_Usuario(request):
     return render(request,'Web/Listar_Usuario.html')
 
+def stock_admin(request):
+    return render(request,'Web/stock_admin.html')
+
 def direccion_usuario(request):
     return render(request,'Web/direccion_usuario.html')
 

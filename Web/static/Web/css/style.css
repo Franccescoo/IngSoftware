@@ -109,6 +109,11 @@ body{
     margin: auto;
 }
 
+.reservation-form,
+.contact-form12 {
+    margin: auto;
+}
+
 .reservation-form .form-control,
 .contact-form .form-control {
     border: none;

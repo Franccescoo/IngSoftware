@@ -1,9 +1,13 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    {% block listar %}
+    <a class="nav-link" href="{% url 'Listar_Usuario' %}">Listar Administradores</a>
+    {% endblock listar %}
+
     {% block nav1 %}
     <li class="nav-item">
-        <a class="nav-link" href="#">Stock Disponible</a>
+        <a class="nav-link" href="{% url 'stock_admin' %}">Stock Disponible</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
