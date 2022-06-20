@@ -73,10 +73,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'Listar_Usuario' %}">Listar Administradores</a>
                     </li>
+                    {% block nav1 %}
+                    {% endblock nav1 %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Cuenta</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Ver Perfil</a>
+                            {% block perfil %}
+                            {% endblock perfil %}
                             <a class="dropdown-item" href="{% url 'Login' %}">Iniciar Sesión</a>
                             <a class="dropdown-item" href="{% url 'Registrarse' %}">Registrarse</a>
                         </div>
@@ -122,6 +125,7 @@
 
     <!--Validaciones-->
     <script src="/static/Web/js/valiUsuario.js"></script>
+    <!--<script src="/static/Web/js/valiLogin.js"></script>-->
 
 </body>
 </html>

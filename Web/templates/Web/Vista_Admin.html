@@ -1,9 +1,48 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    {% block nav1 %}
+    <li class="nav-item">
+        <a class="nav-link" href="#">Stock Disponible</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
+    </li>
+    {% endblock nav1 %}
+
+    {% block perfil %}
+    <a class="dropdown-item" href="{% url 'Vista_Admin' %}">Ver Perfil</a>
+    {% endblock perfil %}
+
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
+    <div class="container">
+        <div class="contact-form">
+            <div class="contact-form-title">
+                <center><p style="margin-top: 10px; font-size: 20px; color: black;">Perfil</p></center>
+            </div>
+            <div class="row">
+                
+                <div class="col-12 contact-form-title" >
+                    <p style="margin-bottom: 10px;">Nombre:</p>
+                    <input type="text" class="form-control" placeholder="Admin" id="nomUser" name="nomUser" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Apellido:</p>
+                    <input type="text" class="form-control" placeholder="" id="apeUser" name="apeUser" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Email:</p>
+                    <input type="email" class="form-control" placeholder="admin@gmail.com" name="email" id="email" readonly="readonly">
+                </div>
+                <div class="col-12 contact-form-title">
+                    <p style="margin-bottom: 10px;">Contraseña:</p>
+                    <input type="password" class="form-control" placeholder="*********" name="password1" id="password1" readonly="readonly">
+                </div>
+            </div>
+        </div>
+    </div>
     
 
     {% endblock menu %}
