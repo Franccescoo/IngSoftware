@@ -1,6 +1,6 @@
 from unicodedata import name
 from django.urls import URLPattern, path
-from .views import  menu, Listar_Usuario, menu_usuario, stock_admin, direccion_usuario, Login, login_app, Registrarse, registrarUsuario, eliminar_usuario, test, Vista_Usuario, Vista_Admin
+from .views import  menu, Listar_Usuario, metodo, menu_usuario, stock_admin, direccion_usuario, Login, login_app, Registrarse, registrarUsuario, eliminar_usuario, test, Vista_Usuario, Vista_Admin
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 
@@ -8,6 +8,7 @@ urlpatterns = [
     path('',menu,name="menu"),
     path('menu',menu,name="menu"),
     path('menu_usuario',menu_usuario,name="menu_usuario"),
+    path('metodo',metodo,name="metodo"),
     path('Listar_Usuario',Listar_Usuario,name="Listar_Usuario"),
     path('Registrarse',views.Registrarse,name="Registrarse"),
     path('test',test,name="test"),

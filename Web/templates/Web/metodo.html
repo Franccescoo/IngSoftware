@@ -1,9 +1,115 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    <!-- ***** MENU PERSONALIZADO EN NAV ***** -->
+    {% block menuperso %}
+    <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
+    {% endblock menuperso %}
+    <!------------------------------------------->
+
+    <!-- ***** AÑADIR CERRAR SESION Y ALGO MAS ***** -->
+    {% block nav1 %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'direccion_usuario' %}">Dirección</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
+    </li>
+    {% endblock nav1 %}
+   <!------------------------------------------->
+
+    <!-- ***** AÑADIR VER PERFIL ***** -->
+    {% block perfil %}
+    <a class="dropdown-item" href="{% url 'Vista_Usuario' %}">Ver Perfil</a>
+    {% endblock perfil %}
+    <!------------------------------------------->
+    <!------------------------------------------->
+    <!------------------------------------------->
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
+    <div class="contact-form-title">
+        <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 0px;padding-top: 10px;">¿Dónde quieres pedir hoy?
+        </p></center>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="btn-group" role="group" style="padding-top: 30px;" aria-label="Basic checkbox toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-warning" for="btncheck1" style="right: 20px;">Delivery</label>
+            
+
+                <input type="radio" class="btn-check" name="btnradio" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-warning" for="btncheck2">Retiro en Tienda</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-form">
+            <div class="contact-form-title">
+                <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 20px;">Dirección</p></center>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                     <input type="text" class="form-control" placeholder="Jardin de Marte Sur 590" readonly="readonly" style="width: 400px;">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'Web/img/plan-img/editar.png' %}" height="30px" style="margin-top: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form-title">
+        <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 0px;padding-top: 10px;">Métodos de pago
+        </p></center>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="btn-group" role="group" style="padding-top: 30px;padding-bottom: 15px;" aria-label="Basic checkbox toggle button group">
+                <input type="radio" class="btn-check" name="1" id="1" autocomplete="off">
+                <label class="btn btn-outline-warning" for="1" style="right: 20px;" >Efectivo</label>
+
+                <input type="radio" class="btn-check" name="1" id="2" autocomplete="off">
+                <label class="btn btn-outline-warning" for="2">Tarjeta</label>
+
+                <input type="radio" class="btn-check" name="1" id="3" autocomplete="off">
+                <label class="btn btn-outline-warning" for="3" style="margin-left: 20px;" >Webpay</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form-title">
+        <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 0px;padding-top: 10px; padding-bottom: 30px;">Resumen
+        </p></center>
+    </div>
+
+    
+    <div class="container">
+        <div class="row">
+
+            <div class="col-6">
+                <center>
+                   <img class="card-img-top" src="{% static 'Web/img/comidas/pizza1.jpg' %}" 
+                    style="height: 300px; width: 360px;" alt="Pizza"> 
+                </center>
+                
+            </div>
+
+            <div class="col-6">
+                <div class="card-body">
+                    <h5 class="card-tittle">Pizza de pepperoni</h5>
+                    <hr />
+                    <h6 class="card-subtittle">Base de salsa de tomate y queso y pepperoni importado.</h6>
+                    <h5 class="card-subtittle">$9.990</h5>                                                  
+                </div> 
+            </div>
+
+        </div>
+    </div>
     
 
     {% endblock menu %}

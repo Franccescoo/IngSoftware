@@ -11,6 +11,9 @@ def menu(request):
 def menu_usuario(request):
     return render(request,'Web/menu_usuario.html')
 
+def metodo(request):
+    return render(request,'Web/metodo.html')
+
 def Listar_Usuario(request):
     return render(request,'Web/Listar_Usuario.html')
 
