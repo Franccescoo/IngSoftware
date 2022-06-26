@@ -137,3 +137,21 @@ body{
     border: none;
     height: 120px;
 }
+
+.cuadrado {
+    font-weight: 600;
+    font-size: 20px;
+    width: 400px;           /* Ancho de 150 píxeles */
+    height: 200px;          /* Alto de 150 píxeles */
+    background-image: linear-gradient(to right, rgb(255, 72, 0), rgb(212, 155, 0));      /* Fondo de color rojo */
+    border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+  }
+
+.rectangulo {
+    font-weight: 600;
+    font-size: 20px;
+    width: 1100px;           /* Ancho de 150 píxeles */
+    height: 40px;          /* Alto de 150 píxeles */
+    background-image: linear-gradient(to right, rgb(255, 72, 0), rgb(212, 155, 0));      /* Fondo de color rojo */
+    border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+  }

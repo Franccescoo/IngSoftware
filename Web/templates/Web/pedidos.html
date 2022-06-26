@@ -1,6 +1,13 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    {% block script %}
+    <style>
+        #link { color: #000000; } /* CSS link color */
+        #link {text-decoration: none; }
+    </style>
+    {% endblock script %}
+
     <!-- ***** MENU PERSONALIZADO EN NAV ***** -->
     {% block menuperso %}
     <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
@@ -31,20 +38,33 @@
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
-    <div class="container">
-        <div class="contact-form">
-            <div class="contact-form-title">
-                <center><p style="margin-top: 10px; font-size: 20px; color: black;">Dirección</p></center>
+    <div class="contact-form-title">
+        <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 20px;">Pedidos</p></center>
+    </div>
+    <a id="link" href="{% url 'confirmar' %}">
+        <div class="container" align="center" style="padding-top: 30px;">
+            <div class="rectangulo">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Pedido No: #75033</p>
+                    </div>
+                    <div class="col-6">
+                        <p>EN PROCESO</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </a>
+    
+
+    <div class="container" align="center" style="padding-top: 30px;">
+        <div class="rectangulo">
             <div class="row">
-                <div class="col-8">
-                     <input type="text" class="form-control" placeholder="Jardin de Marte Sur 590" readonly="readonly" style="width: 400px;">
+                <div class="col-6">
+                    <p>Pedido No: #25411</p>
                 </div>
-                <div class="col-2">
-                    <img src="{% static 'Web/img/plan-img/editar.png' %}" height="30px" style="margin-top: 10px;">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'Web/img/plan-img/anadir.png' %}" height="30px" style="margin-top: 10px;">
+                <div class="col-6">
+                    <p>ENTREGADO</p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,15 @@
 {% extends 'Web/layout.html' %}
 {% load static %}
 
+    {% block script %}
+    <script>
+        function r() {
+            location.href="{% url 'pedidos' %}"
+        }
+        setTimeout("r()",10000);
+    </script>
+    {% endblock script %}
+
     <!-- ***** MENU PERSONALIZADO EN NAV ***** -->
     {% block menuperso %}
     <a class="nav-link" href="{% url 'menu_usuario' %}">Menu <span class="visually-hidden">(current)</span></a>
@@ -11,9 +20,6 @@
     {% block nav1 %}
     <li class="nav-item">
         <a class="nav-link" href="{% url 'direccion_usuario' %}">Dirección</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'pedidos' %}">Pedidos</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{% url 'menu' %}">Cerrar Sesión</a>
@@ -31,24 +37,23 @@
     <!-- ***** Menu Area Start ***** -->
     {% block menu %}
 
-    <div class="container">
-        <div class="contact-form">
-            <div class="contact-form-title">
-                <center><p style="margin-top: 10px; font-size: 20px; color: black;">Dirección</p></center>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                     <input type="text" class="form-control" placeholder="Jardin de Marte Sur 590" readonly="readonly" style="width: 400px;">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'Web/img/plan-img/editar.png' %}" height="30px" style="margin-top: 10px;">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'Web/img/plan-img/anadir.png' %}" height="30px" style="margin-top: 10px;">
-                </div>
-            </div>
+    <div class="contact-form-title">
+        <center><p style="margin-top: 10px; font-size: 20px; color: black;margin-bottom: 20px;">Pedido No: #75033</p></center>
+    </div>
+
+    <div class="container" align="center" style="padding-top: 30px;">
+        <div class="cuadrado">
+            <center>
+                <p>
+                    Estimado (a) Franccesco Artuso <br>
+                    Tu orden está confirmada para nuestro local de
+                    Quilicura fono: +569 79066489. <br> <br>
+                    Hora de entrega: 21:53 hrs.
+                </p>
+            </center>
         </div>
     </div>
+    
 
     {% endblock menu %}
     <!-- ***** Menu Area End ***** -->

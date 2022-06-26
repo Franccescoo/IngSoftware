@@ -14,6 +14,12 @@ def menu_usuario(request):
 def metodo(request):
     return render(request,'Web/metodo.html')
 
+def confirmar(request):
+    return render(request,'Web/confirmar.html')
+
+def pedidos(request):
+    return render(request,'Web/pedidos.html')
+
 def Listar_Usuario(request):
     return render(request,'Web/Listar_Usuario.html')
 
